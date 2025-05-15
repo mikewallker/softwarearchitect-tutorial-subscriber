@@ -24,3 +24,7 @@ This is a **connection string** for an AMQP broker (like RabbitMQ).
 - Connect to the AMQP server running on local computer (`localhost`)
 - Use port `5672` (default for AMQP)
 - Log in with username `guest` and password `guest`
+
+## Screenshot Slow Subscriber
+The total number of queue is about 25. It shows that during peak request, there are 25 messages queued, waiting to be processed by subscriber. Because each cargo run in publisher sent 5 events, and I executed around 10 cargo run, it shows that the subscriber processing events one by one.
+![Slow Subscriber](slow_subscriber.png)
