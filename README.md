@@ -1,1 +1,1 @@
-"# softwarearchitect-tutorial-subscriber" 
+"# softwarearchitect-tutorial-subscriber"
