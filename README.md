@@ -28,3 +28,7 @@ This is a **connection string** for an AMQP broker (like RabbitMQ).
 ## Screenshot Slow Subscriber
 The total number of queue is about 25. It shows that during peak request, there are 25 messages queued, waiting to be processed by subscriber. Because each cargo run in publisher sent 5 events, and I executed around 10 cargo run, it shows that the subscriber processing events one by one.
 ![Slow Subscriber](slow_subscriber.png)
+
+## Screenshot Running at least three subscribers
+The spike of the queue graph is reduced quicker, this is because we ran 3 subscribers that connects to the same queue, so the message sent by the publisher can be processed by the 3 subscriber at the same time, each processing different messages, leading to faster batch messages processing
+![3 Subscriber](running3subscriber.png)
